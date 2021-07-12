@@ -1,0 +1,25 @@
+header {
+  grid-area: header;
+}
+
+header .inline li {
+  position: relative;
+}
+
+header .inline li .active-indicator {
+  display: none;
+  position: absolute;
+  background-color: #1e87f0;
+  width: 90%;
+  left: 50%;
+  margin-left: -45%;
+  bottom: 15px;
+  height: 3px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+header .inline li.uk-active .active-indicator,
+header .inline li:hover .active-indicator {
+  display: block;
+}

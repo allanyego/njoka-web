@@ -1,14 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faFacebookF,
+  faGithubAlt,
+  faHtml5,
+  faInstagram,
+  faLinkedinIn,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { faLaptopCode, faUserCog } from "@fortawesome/free-solid-svg-icons";
+
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+library.add(
+  faFacebookF,
+  faLaptopCode,
+  faTwitter,
+  faHtml5,
+  faGithubAlt,
+  faLinkedinIn,
+  faInstagram,
+  faUserCog
+);
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
