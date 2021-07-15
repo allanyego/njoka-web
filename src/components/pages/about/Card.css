@@ -1,0 +1,13 @@
+.about-card img {
+  width: 55%;
+}
+
+.about-card h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.about-card .media-wrapper {
+  height: 8.875em;
+}

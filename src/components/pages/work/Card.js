@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -9,7 +10,7 @@ const ANIMATION_VARIANTS = {
     bottom: 0,
   },
   hidden: {
-    bottom: -85,
+    bottom: -150,
   },
 };
 
@@ -25,7 +26,7 @@ function CardBody({ projectName, skills, _id }) {
       <h5 className="uk-text-capitalize uk-text-bolder uk-margin-small-bottom">
         {projectName}
       </h5>
-      <div className="uk-flex uk-flex-center skills">
+      <div className="uk-flex skills">
         {skills.map((skill, index) => (
           // eslint-disable-next-line react/no-array-index-key
           <div key={index} className="uk-badge">
@@ -33,12 +34,13 @@ function CardBody({ projectName, skills, _id }) {
           </div>
         ))}
       </div>
-      <div className="uk-flex uk-flex-center uk-margin-small-top">
+      <div className="uk-margin-small-top">
         <Link
           to={`/work/${_id}`}
           className="uk-button uk-button-default uk-button-small"
           type="button"
         >
+          <FontAwesomeIcon icon="eye" className="uk-margin-small-right" />
           View
         </Link>
       </div>
@@ -62,10 +64,9 @@ export default function Card({ _id, image, projectName, skills }) {
           <img src={image} alt="project preview" />
         </div>
 
-        <CardBody {...{ _id, projectName, skills }} />
-        {/* <AnimatePresence>
+        <AnimatePresence>
           {isVisible && <CardBody {...{ _id, projectName, skills }} />}
-        </AnimatePresence> */}
+        </AnimatePresence>
       </div>
     </div>
   );

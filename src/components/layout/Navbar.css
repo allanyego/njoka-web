@@ -2,6 +2,10 @@ header {
   grid-area: header;
 }
 
+header img {
+  width: 45px;
+}
+
 header .inline li {
   position: relative;
 }

@@ -9,21 +9,38 @@ import {
   faLinkedinIn,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faLaptopCode, faUserCog } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAt,
+  faEye,
+  faLaptopCode,
+  faMapMarker,
+  faPaperPlane,
+  faPhone,
+  faSpinner,
+  faUser,
+  faUserCog,
+} from "@fortawesome/free-solid-svg-icons";
 
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 library.add(
+  faAt,
+  faEye,
   faFacebookF,
   faLaptopCode,
+  faPhone,
+  faMapMarker,
   faTwitter,
   faHtml5,
   faGithubAlt,
   faLinkedinIn,
   faInstagram,
-  faUserCog
+  faPaperPlane,
+  faUserCog,
+  faUser,
+  faSpinner
 );
 
 ReactDOM.render(

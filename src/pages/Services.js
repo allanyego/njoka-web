@@ -1,48 +1,32 @@
+import { useEffect, useState } from "react";
 import Page from "../components/layout/Page";
 import Item from "../components/pages/services/Item";
-
-const SERVICES = [
-  {
-    key: 1,
-    title: "web development",
-    services: [
-      "domain registration",
-      "web hosting",
-      "responsive design",
-      "frontend development",
-      "backend development",
-    ],
-  },
-  {
-    key: 2,
-    title: "internet marketing",
-    services: ["Facebook advertising", "SEO and SEM", "Facebook apps"],
-  },
-  {
-    key: 3,
-    title: "e-commerce integration",
-    services: [
-      "lipa na M-Pesa",
-      "direct bank transfer",
-      "paypal integration",
-      "card checkout",
-      "WooCommerce and Shopify",
-    ],
-  },
-  {
-    key: 4,
-    title: "application development",
-    services: ["web applications", "c# applications", "vb.Net applications"],
-  },
-];
+import { get } from "../services/http/services";
 
 export default function Services() {
+  const [services, setServices] = useState(null);
+
+  const fetchServices = async () => {
+    try {
+      const data = await get();
+      setServices(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchServices();
+  }, []);
+
   return (
     <Page heading="Services">
       <div uk-grid="true">
-        {SERVICES.map(({ key, ...props }) => (
-          <Item key={key} {...props} />
-        ))}
+        {!services ? (
+          <div>Loading...</div>
+        ) : (
+          services.map((service) => <Item key={service._id} {...service} />)
+        )}
       </div>
     </Page>
   );

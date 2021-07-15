@@ -17,9 +17,10 @@ export default async function request(
       opts.body = JSON.stringify(data);
     } else {
       const formData = new FormData();
-      for (let key of Object.keys(data)) {
+
+      Object.keys(data).forEach((key) => {
         formData.append(key, data[key]);
-      }
+      });
 
       opts.body = formData;
     }

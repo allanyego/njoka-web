@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 
+import logo from "../../assets/images/logo.svg";
 import "./Navbar.css";
 
 function LinkComponent({ href, children, navigate, ...props }) {
@@ -59,7 +60,7 @@ export default function Navbar() {
       <nav className="uk-navbar-container" uk-navbar="true">
         <div className="uk-navbar-left">
           <ul className="uk-navbar-nav">
-            <NavItem label="Njoka" to="/" exact />
+            <NavItem label={<img src={logo} alt="brand" />} to="/" exact />
           </ul>
         </div>
         <div className="uk-navbar-right inline">

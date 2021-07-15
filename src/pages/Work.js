@@ -1,34 +1,33 @@
-import testProjectImage from "../assets/images/test-project.png";
+import { useEffect, useState } from "react";
+
 import Page from "../components/layout/Page";
 import Card from "../components/pages/work/Card";
+import { get } from "../services/http/work";
 
-const TEST_PROJECTS = [
-  {
-    _id: 1,
-    projectName: "huduma app",
-    image: testProjectImage,
-    skills: ["php", "xanarin"],
-  },
-  {
-    _id: 2,
-    projectName: "huduma app",
-    image: testProjectImage,
-    skills: ["php", "xanarin"],
-  },
-  {
-    _id: 3,
-    projectName: "huduma app",
-    image: testProjectImage,
-    skills: ["php", "xanarin"],
-  },
-];
 export default function Work() {
+  const [work, setWork] = useState(null);
+
+  const fetchWork = async () => {
+    try {
+      const data = await get();
+      setWork(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchWork();
+  }, []);
+
   return (
     <Page heading="Work">
       <div uk-grid="true">
-        {TEST_PROJECTS.map((project) => (
-          <Card key={project._id} {...project} />
-        ))}
+        {!work ? (
+          <div>Loading...</div>
+        ) : (
+          work.map((w) => <Card key={w._id} {...w} />)
+        )}
       </div>
     </Page>
   );

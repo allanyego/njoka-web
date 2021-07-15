@@ -1,7 +1,9 @@
+import "./Card.css";
+
 export default function Card({ title, body, image }) {
   return (
-    <div className="uk-width-1-3 uk-card uk-card-hover uk-card-body">
-      <div className="uk-flex uk-flex-middle">
+    <div className="uk-width-1-3 uk-card uk-card-hover uk-card-body about-card">
+      <div className="uk-flex uk-flex-center media-wrapper">
         <img src={image} alt="service media" />
       </div>
       <h3 className="uk-card-title uk-text-center uk-text-uppercase">
