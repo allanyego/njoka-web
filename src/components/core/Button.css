@@ -1,0 +1,24 @@
+.uk-button-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.uk-button-secondary {
+  background-color: var(--color-secondary) !important;
+}
+
+.uk-button-default {
+  border-color: var(--color-gray-shade) !important;
+}
+
+.uk-button-default:focus,
+.uk-button-default:hover {
+  border-color: var(--color-gray) !important;
+}
+
+.uk-button-primary:disabled,
+.uk-button-secondary:disabled,
+.uk-button-default:disabled {
+  background: none !important;
+  border-color: var(--color-gray-dark) !important;
+  color: var(--color-gray-dark) !important;
+}

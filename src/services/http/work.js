@@ -25,7 +25,25 @@ export async function get() {
   ];
 }
 
-export async function post(data /* , token */) {
+export async function getById(_id) {
+  return {
+    _id: 3,
+    projectName: "huduma app",
+    image: testProjectImage,
+    skills: ["php", "xanarin"],
+  };
+}
+
+export async function update(_id, data, token) {
+  return {
+    _id: 3,
+    projectName: "huduma app",
+    image: testProjectImage,
+    skills: ["php", "xanarin"],
+  };
+}
+
+export async function post(data, token) {
   return {
     _id: 500,
     projectName: data.name,

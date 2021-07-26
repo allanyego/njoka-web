@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import InputFeedback from "./InputFeedback";
 
 function InputEl(props) {
@@ -18,11 +19,16 @@ function InputEl(props) {
   );
 }
 
-export default function Input({ icon, error, type = "text", ...props }) {
+export default function Input({ icon, error = null, type = "text", ...props }) {
   return (
     <div>
       {icon ? (
-        <div className="uk-inline">
+        <div
+          className="uk-inline"
+          style={{
+            width: "100%",
+          }}
+        >
           <span className="uk-form-icon">
             <FontAwesomeIcon icon={icon} />
           </span>

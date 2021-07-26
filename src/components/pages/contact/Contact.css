@@ -2,3 +2,7 @@
 .contact-info .contact-detail {
   gap: 0.5em;
 }
+
+.contact-info .contact-detail span {
+  color: var(--color-light-shade);
+}

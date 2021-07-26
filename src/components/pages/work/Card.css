@@ -13,3 +13,7 @@
 .project-card .body .skills {
   gap: 0.3em;
 }
+
+.project-card .body .uk-badge {
+  background-color: var(--color-secondary);
+}

@@ -71,7 +71,7 @@ export default function Form({ handleSubmit }) {
           <div className="uk-width-1-1 uk-flex uk-flex-right">
             <Button
               type="submit"
-              className="uk-button uk-button-primary"
+              className="uk-button uk-button-secondary"
               isLoading={isSubmitting}
               disabled={!isValid}
               icon="paper-plane"

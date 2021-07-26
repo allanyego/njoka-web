@@ -1,0 +1,16 @@
+.home-page h1 {
+  color: var(--color-light);
+  font-weight: 700;
+}
+
+.home-page p {
+  color: var(--color-light-shade);
+}
+
+.home-page p img {
+  width: 3em;
+}
+
+.home-page button.uk-button {
+  background-color: var(--color-secondary);
+}

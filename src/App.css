@@ -12,3 +12,27 @@
   grid-area: main;
   overflow-y: auto;
 }
+
+.App > .bottom-background-svg,
+.App > .top-background-svg,
+.App > .right-background-svg {
+  position: fixed;
+  z-index: -1;
+}
+
+.App > .bottom-background-svg {
+  bottom: 0;
+  right: 0;
+}
+
+.App > .top-background-svg {
+  width: 5em;
+  top: 0;
+  left: 20%;
+}
+
+.App > .right-background-svg {
+  height: 5em;
+  top: 15%;
+  right: 0;
+}

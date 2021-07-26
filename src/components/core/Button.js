@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import "./Button.css";
+
 function ButtonIcon({ icon, isLoading }) {
   return (
     <FontAwesomeIcon

@@ -1,0 +1,25 @@
+.uk-badge.skill-badge {
+  padding: 0 !important;
+  height: auto !important;
+  overflow: hidden;
+}
+
+.uk-badge.skill-badge span {
+  background-color: var(--color-secondary);
+  padding: 0.2em 0.5em;
+}
+
+.uk-badge.skill-badge.small span {
+  padding: 0.1em 0.4em;
+}
+
+.uk-badge.skill-badge div {
+  flex-grow: 1;
+  cursor: pointer;
+  padding: 0 0.6em;
+  height: 100%;
+  background-color: var(--color-dark-shade);
+  color: var(--color-danger);
+  border-bottom-right-radius: inherit;
+  border-top-right-radius: inherit;
+}

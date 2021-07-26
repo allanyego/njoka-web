@@ -37,7 +37,7 @@ export async function get() {
   ];
 }
 
-export async function post(data /** , token */) {
+export async function getById(_id) {
   return {
     key: 4,
     title: "application development",
@@ -45,7 +45,15 @@ export async function post(data /** , token */) {
   };
 }
 
-export async function update(data /** , token */) {
+export async function post(data, token) {
+  return {
+    key: 4,
+    title: "application development",
+    services: ["web applications", "c# applications", "vb.Net applications"],
+  };
+}
+
+export async function update(_id, data, token) {
   return {
     key: 4,
     title: "application development",

@@ -2,18 +2,27 @@ header {
   grid-area: header;
 }
 
+header nav {
+  background: none !important;
+}
+
 header img {
   width: 45px;
 }
 
 header .inline li {
   position: relative;
+  font-weight: 700;
+}
+
+header nav li a {
+  color: var(--color-light) !important;
 }
 
 header .inline li .active-indicator {
   display: none;
   position: absolute;
-  background-color: #1e87f0;
+  background-color: var(--color-secondary);
   width: 90%;
   left: 50%;
   margin-left: -45%;

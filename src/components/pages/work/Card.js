@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import SkillBadge from "../../core/SkillBadge";
 
 import "./Card.css";
 
@@ -29,9 +30,7 @@ function CardBody({ projectName, skills, _id }) {
       <div className="uk-flex skills">
         {skills.map((skill, index) => (
           // eslint-disable-next-line react/no-array-index-key
-          <div key={index} className="uk-badge">
-            {skill}
-          </div>
+          <SkillBadge value={skill} key={index} small />
         ))}
       </div>
       <div className="uk-margin-small-top">

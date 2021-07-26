@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 
 import logo from "../../assets/images/logo.svg";
@@ -63,11 +64,25 @@ export default function Navbar() {
             <NavItem label={<img src={logo} alt="brand" />} to="/" exact />
           </ul>
         </div>
-        <div className="uk-navbar-right inline">
-          <ul className="uk-navbar-nav">
+
+        <div className="uk-navbar-right">
+          <ul className="uk-navbar-nav inline">
             {NAV_ITEMS.map(({ key, ...props }) => (
               <NavItem {...props} key={key} />
             ))}
+          </ul>
+          <ul className="uk-navbar-nav">
+            <li>
+              <button
+                className="uk-button uk-button-link uk-text-danger"
+                type="button"
+                style={{
+                  padding: "0 15px",
+                }}
+              >
+                <FontAwesomeIcon icon="sign-out-alt" />
+              </button>
+            </li>
           </ul>
         </div>
       </nav>

@@ -1,0 +1,7 @@
+section > .uk-heading-bullet {
+  color: var(--color-light);
+}
+
+section > .uk-heading-bullet::before {
+  border-color: var(--color-secondary);
+}

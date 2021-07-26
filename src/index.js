@@ -11,12 +11,23 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faAt,
+  faBoxes,
+  faCheckCircle,
   faEye,
+  faFileAlt,
+  faImage,
+  faKey,
   faLaptopCode,
   faMapMarker,
   faPaperPlane,
   faPhone,
+  faPlus,
+  faSave,
+  faSignInAlt,
+  faSignOutAlt,
   faSpinner,
+  faTimes,
+  faTimesCircle,
   faUser,
   faUserCog,
 } from "@fortawesome/free-solid-svg-icons";
@@ -27,8 +38,12 @@ import reportWebVitals from "./reportWebVitals";
 
 library.add(
   faAt,
+  faBoxes,
   faEye,
+  faImage,
+  faKey,
   faFacebookF,
+  faFileAlt,
   faLaptopCode,
   faPhone,
   faMapMarker,
@@ -38,9 +53,16 @@ library.add(
   faLinkedinIn,
   faInstagram,
   faPaperPlane,
+  faPlus,
   faUserCog,
   faUser,
-  faSpinner
+  faSave,
+  faSpinner,
+  faSignInAlt,
+  faSignOutAlt,
+  faTimes,
+  faTimesCircle,
+  faCheckCircle
 );
 
 ReactDOM.render(

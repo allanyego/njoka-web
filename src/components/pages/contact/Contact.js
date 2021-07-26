@@ -6,7 +6,12 @@ import "./Contact.css";
 function Detail({ icon, label }) {
   return (
     <div className="uk-flex uk-flex-middle contact-detail">
-      <FontAwesomeIcon icon={icon} />
+      <FontAwesomeIcon
+        icon={icon}
+        style={{
+          color: "var(--color-secondary)",
+        }}
+      />
       <span className="uk-display-block uk-text-bold">{label}</span>
     </div>
   );

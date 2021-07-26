@@ -1,0 +1,27 @@
+.loader > div {
+  width: 10em;
+}
+
+.loader p {
+  font-weight: 700;
+  color: var(--color-light);
+}
+
+.loader p {
+  font-weight: 700;
+  color: var(--color-light);
+}
+
+.loader .loader-pill {
+  position: relative;
+}
+
+.loader .loader-pill div {
+  height: 0.8em;
+  width: 20%;
+  background-color: var(--color-secondary);
+  border-radius: 0.4em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
